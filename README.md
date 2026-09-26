@@ -6,6 +6,30 @@ A real-time options flow intelligence pipeline that ingests Unusual Whales data 
 
 ---
 
+## Demo
+
+> Interactive terminal demo — [view the full case study](https://emmanuelzyronis.vercel.app/work/whale-signals)
+
+```text
+$ node dist/scanner.js --stream live --min-premium 50000
+
+WhaleSignals — scanning options flow
+
+[09:14:22] SIGNAL  NVDA CALL sweep  $165 strike  2026-10-18
+  Premium: $2,847,000   Vol/OI: 8.2×   Score: 87/100 — HIGH CONVICTION
+  Evidence:  3 dark pool prints in 4 min, same strike
+  Inference: Coordinated institutional accumulation before a catalyst
+  Unknown:   Whether hedge or directional bet
+
+[09:17:45] SIGNAL  TSLA PUT block   $210 strike  2026-11-21
+  Premium: $1,234,000   Vol/OI: 2.1×   Score: 61/100 — MODERATE
+  Evidence:  Single large block, after-hours timing
+  Inference: Protective hedge on existing long likely
+  Unknown:   Counterparty, whether covered or naked
+```
+
+---
+
 ## Why This Is Different From a Dashboard
 
 Most tools that wrap the UW API show you the data. WhaleSignals tells you what it means and why it thinks so.
